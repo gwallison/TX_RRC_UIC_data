@@ -1,0 +1,7 @@
+                                                                        00000010
+   The layout/record description for segments UIMNH10 (Record Type=04)  00000100
+   and UIMNH10H (Record Type=05) are included in your directory.        00000200
+                                                                        00000300
+   These two layouts are the ASCII data versions of the IMS             00000310
+   segments, which replace the corresponding record description         00000400
+   found in Manual #UIA010.                                             00000500

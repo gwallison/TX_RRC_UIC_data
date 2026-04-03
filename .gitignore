@@ -1,0 +1,14 @@
+# Large data files — download from RRC portal instead
+uif700a.txt.gz
+uif700.ebc.gz
+*.gz
+*.ebc
+
+# Parsed output CSVs (re-generate with parse_uic_data.py)
+output/
+
+# PDF manual (available at https://www.rrc.texas.gov/media/v3onmigl/uic_manual_uia010_3116.pdf)
+*.pdf
+
+# Claude Code settings
+.claude/

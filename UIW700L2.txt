@@ -1,0 +1,51 @@
+1     ******************************************************************
+      *                           UIW700L2                             *
+      *  UNDERGROUND INJECTION CONTROL H-10H STORAGE WELL MONTHLY      *
+      *              MONITOR SEGMENT                                   *
+      *                                                                *
+      *================================================================*
+      *   THIS LAYOUT IS FOR THE ASCII NON COMP-3 DATA  VERSION        *
+      *================================================================*
+      *                                                                *
+      *  SEGMENT NAME:  UIMNH10H             SEGMENT LENGTH            *
+      *                                                                *
+      *  FUNCTION           SOURCE                    SSA NAME         *
+      *  ------------------------------------------------------------- *
+      *  KEY                MN-H10H-KEY               MNH10HKY         *
+      ******************************************************************
+      *
+       01  UIC-MN-H10H-SEGMENT.                                         POSITION
+           03  RRC-H10H-SEGMENT-ID              PIC X(02).              1
+           03  MN-H10H-KEY.
+               05  MN-H10H-CCYY.
+                   10 MN-H10H-CENTURY            PIC 9(2)  VALUE ZEROS. 3
+                   10 MN-H10H-YEAR               PIC 9(2)  VALUE ZEROS. 5
+               05  MN-H10H-MONTH                 PIC 9(2)  VALUE ZEROS. 7
+      *  --------------------- MAXIMUM PRESSURES --------------------- *
+           03  MN-H10H-MAX-HYDROCARB-PSIG    PIC 9(5)  VALUE ZEROS.     9
+           03  MN-H10H-MAX-HYDROCARB-PSIG-X REDEFINES
+               MN-H10H-MAX-HYDROCARB-PSIG    PIC X(5).
+           03  MN-H10H-MAX-BRINE-PSIG        PIC 9(5)  VALUE ZEROS.     14
+           03  MN-H10H-MAX-BRINE-PSIG-X REDEFINES
+               MN-H10H-MAX-BRINE-PSIG        PIC X(5).
+      *  --------------- NET VOUMES INJECTED OR WITHDRAWN ------------ *
+           03  MN-H10H-INJ-BRINE-BBLS-SIGN  PIC X(01) VALUE SPACES.     19
+           03  MN-H10H-INJ-BRINE-BBLS       PIC 9(09) VALUE ZEROS.      20
+           03  MN-H10H-INJ-BRINE-BBLS-X REDEFINES
+               MN-H10H-INJ-BRINE-BBLS       PIC X(9).
+
+           03  MN-H10H-INJ-HYDRO-BBLS-SIGN  PIC X(1) VALUE SPACES.      29
+           03  MN-H10H-INJ-HYDROCARB-BBLS   PIC 9(9) VALUE ZEROS.       30
+           03  MN-H10H-INJ-HYDROCARB-BBLS-X REDEFINES
+               MN-H10H-INJ-HYDROCARB-BBLS   PIC X(9).
+
+           03  MN-H10H-INJ-GAS-MCF-SIGN     PIC X(1)  VALUE SPACES.     39
+           03  MN-H10H-INJ-GAS-MCF          PIC 9(9) VALUE ZEROS.       40
+           03  MN-H10H-INJ-GAS-MCF-X REDEFINES
+               MN-H10H-INJ-GAS-MCF          PIC X(9).
+
+           03  MN-H10H-DOCUMENT-ID.
+               05  MN-H10H-DOCUMENT-CYCLE  PIC 9(4)    VALUE ZEROS.     49
+               05  MN-H10H-DOCUMENT-BATCH  PIC 9(4)    VALUE ZEROS.     53
+               05  MN-H10H-DOCUMENT-ITEM   PIC 9(4)    VALUE ZEROS.     57
+           03  RRC-MN-H10H-FILLER          PIC X(561)  VALUE SPACES.    61

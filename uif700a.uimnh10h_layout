@@ -1,0 +1,54 @@
+000100******************************************************************
+000200*                           UIW700LA                             *
+000300*  UNDERGROUND INJECTION CONTROL H-10H STORAGE WELL MONTHLY      *
+000400*              MONITOR LAYOUT                                    *
+000500*                                                                *
+000600*================================================================*
+000700* THIS LAYOUT IS FOR THE NON COMPRESSED DATA VERSION.            *
+000800*================================================================*
+000900*                                                                *
+001000*  REFERENCE ID:  UIMNH10H             FILE    LENGTH  622       *
+001100*                                                                *
+001200*  FUNCTION           SOURCE                    SSA NAME         *
+001300*  ------------------------------------------------------------- *
+001400*  KEY                MN-H10H-KEY               MNH10HKY         *
+001500******************************************************************
+001600*
+001700 01  UIC-MN-H10H-SEGMENT.
+001800     03  RRC-H10H-SEGMENT-ID              PIC X(02).
+001900     03  MN-H10H-KEY.
+002000         05  MN-H10H-CCYY.
+002100             10 MN-H10H-CENTURY            PIC 9(2)  VALUE ZEROS.
+002200             10 MN-H10H-YEAR               PIC 9(2)  VALUE ZEROS.
+002300         05  MN-H10H-MONTH                 PIC 9(2)  VALUE ZEROS.
+002400*  --------------------- MAXIMUM PRESSURES --------------------- *
+002500     03  MN-H10H-MAX-HYDROCARB-PSIG    PIC 9(5)  VALUE ZEROS.
+002600     03  MN-H10H-MAX-HYDROCARB-PSIG-X REDEFINES
+002700         MN-H10H-MAX-HYDROCARB-PSIG    PIC X(5).
+002800     03  MN-H10H-MAX-BRINE-PSIG        PIC 9(5)  VALUE ZEROS.
+002900     03  MN-H10H-MAX-BRINE-PSIG-X REDEFINES
+003000         MN-H10H-MAX-BRINE-PSIG        PIC X(5).
+003100*  --------------- NET VOUMES INJECTED OR WITHDRAWN ------------ *
+003200*    CHANGED MN-H10H-INJ-BRINE-BBLS FROM 5 TO 9 BYTES.   05/02/24
+003300     03  MN-H10H-INJ-BRINE-BBLS-SIGN  PIC X(01) VALUE SPACES.
+003400     03  MN-H10H-INJ-BRINE-BBLS       PIC 9(09) VALUE ZEROS.
+003500     03  MN-H10H-INJ-BRINE-BBLS-X REDEFINES
+003600         MN-H10H-INJ-BRINE-BBLS       PIC X(09).
+003700
+003800*    CHANGED MN-H10H-INJ-HYDROCARB-BBLS  5 TO 9 BYTES.   05/02/24
+003900     03  MN-H10H-INJ-HYDRO-BBLS-SIGN  PIC X(1) VALUE SPACES.
+004000     03  MN-H10H-INJ-HYDROCARB-BBLS   PIC 9(9) VALUE ZEROS.
+004100     03  MN-H10H-INJ-HYDROCARB-BBLS-X REDEFINES
+004200         MN-H10H-INJ-HYDROCARB-BBLS   PIC X(9).
+004300
+004400*    CHANGED MN-H10H-INJ-GAS-MCF         5 TO 9 BYTES.   05/02/24
+004500     03  MN-H10H-INJ-GAS-MCF-SIGN     PIC X(1)  VALUE SPACES.
+004600     03  MN-H10H-INJ-GAS-MCF          PIC 9(9) VALUE ZEROS.
+004700     03  MN-H10H-INJ-GAS-MCF-X REDEFINES
+004800         MN-H10H-INJ-GAS-MCF          PIC X(9).
+004900
+005000     03  MN-H10H-DOCUMENT-ID.
+005100         05  MN-H10H-DOCUMENT-CYCLE  PIC 9(4)    VALUE ZEROS.
+005200         05  MN-H10H-DOCUMENT-BATCH  PIC 9(4)    VALUE ZEROS.
+005300         05  MN-H10H-DOCUMENT-ITEM   PIC 9(4)    VALUE ZEROS.
+005400     03  RRC-MN-H10H-FILLER          PIC X(562)  VALUE SPACES.

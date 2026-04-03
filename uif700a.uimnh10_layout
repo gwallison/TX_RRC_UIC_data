@@ -1,0 +1,48 @@
+1     *****************************************************************
+      *         OIL & GAS UNDERGROUND INJECTION (UI) DATABASE         *
+      *                         (UIW700DA)                            *
+      *================================================================*
+      *   THIS LAYOUT IS FOR THE ASCII NON COMP-3 DATA  VERSION        *
+      *================================================================*
+      *                                                               *
+      * SEGMENT NAME:  UIMNH10                         LENGTH:        *
+      *---------------------------------------------------------------*
+      * VARIABLE                |   FIELD              |  SSA         *
+      * NAME                    |   TYPE               |  NAME        *
+      *---------------------------------------------------------------*
+      * MN-H10-KEY              |   KEY                |  MNH10KEY    *
+      *****************************************************************
+      *
+       01  UIC-MN-H10-SEGMENT.                                          POSITION
+           03  RRC-H10-SEGMENT-ID               PIC X(02).              1
+           03  MN-H10-KEY.
+               05  MN-H10-CCYY.
+                   10 MN-H10-CENTURY           PIC 9(2).                3
+                   10 MN-H10-YEAR              PIC 9(2).                5
+               05  MN-H10-MONTH                PIC 9(2).                7
+           03  MN-H10-AVG-INJ-PRESSURE         PIC 9(4).                9
+           03  MN-H10-AVG-INJ-SPACE REDEFINES
+               MN-H10-AVG-INJ-PRESSURE         PIC X(4).
+           03  MN-H10-MAX-INJ-PRESSURE         PIC 9(4).                13
+           03  MN-H10-MAX-INJ-SPACE REDEFINES
+               MN-H10-MAX-INJ-PRESSURE         PIC X(4).
+           03  MN-H10-TOTAL-VOL-BBL            PIC 9(8).                17
+           03  MN-H10-TOTAL-VOL-BBL-SPACE REDEFINES
+               MN-H10-TOTAL-VOL-BBL            PIC X(8).
+           03  MN-H10-TOTAL-VOL-MCF            PIC 9(8).                25
+           03  MN-H10-TOTAL-VOL-MCF-SPACE REDEFINES
+               MN-H10-TOTAL-VOL-MCF            PIC X(8).
+           03  MN-H10-ANNULUS-MINIMUM          PIC 9(4).                33
+           03  MN-H10-ANNULUS-MINIMUM-SPACE REDEFINES
+               MN-H10-ANNULUS-MINIMUM          PIC X(4).
+           03  MN-H10-ANNULUS-MAXIMUM          PIC 9(4).                37
+           03  MN-H10-ANNULUS-MAXIMUM-SPACE REDEFINES
+               MN-H10-ANNULUS-MAXIMUM          PIC X(4).
+           03  MN-H10-ANNULUS-COUNT            PIC 9(2).                41
+           03  MN-H10-ANNULUS-COUNT-SPACE REDEFINES
+               MN-H10-ANNULUS-COUNT            PIC X(2).
+           03  MN-H10-DOCUMENT-ID.
+               05  MN-H10-DOCUMENT-CYCLE       PIC 9(4) VALUE ZERO.     43
+               05  MN-H10-DOCUMENT-BATCH       PIC 9(4) VALUE ZERO.     47
+               05  MN-H10-DOCUMENT-ITEM        PIC 9(4) VALUE ZERO.     51
+           03  RRC-MN-H10-FILLER               PIC X(568) VALUE SPACES. 55
